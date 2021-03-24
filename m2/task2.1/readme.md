@@ -9,8 +9,8 @@
 ### 2)Briefly describe the main differences of the most popular hypervisors.
     Type 1 hypervisor works above hardware(without host OS between them). Type 2 - inside host OS,
     so it works simultaneously with other applications in host OS (VirtualBox, VMWare). Type 3-4 are 
-    subptypes of Type 1. Type 3 (Monolitic) hypervisor (VMware ESX) manages virtual stack and drivers itself, while
-    type 4 (Microkernel) (Microsoft Hyper -V) delegates this tasks to virtual machines.
+    subptypes of Type 1. Type 3 (Monolitic) hypervisor (VMware ESX) manages virtual stack and drivers 
+    itself, while type 4 (Microkernel) (Microsoft Hyper -V) delegates this tasks to virtual machines.
       
 ## PART 2. WORK WITH VIRTUALBOX
 ### 1)First run VirtualBox and Virtual Machine (VM) </br>

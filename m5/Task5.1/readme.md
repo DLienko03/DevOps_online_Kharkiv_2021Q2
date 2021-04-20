@@ -54,27 +54,53 @@
     -a flag also shows hidden files (starting from point) </br>
     ![image](https://user-images.githubusercontent.com/80945113/115089027-20038600-9f1a-11eb-8ceb-e1b4c3aef24d.png)
     
-5) Perform the following sequence of operations: -  create a subdirectory in the home directory;
+5) Perform the following sequence of operations: 
+    -  create a subdirectory in the home directory;
     -  in this subdirectory create a file containing information about directories located in the root directory (using I/O redirection operations);
-    -  view the created file;-  copy the created file to your home directory using relative and absolute addressing.
+    -  view the created file;
+       ![image](https://user-images.githubusercontent.com/80945113/115455193-4d0dac80-a22a-11eb-9a43-623b5b32f5c5.png)
+    -  copy the created file to your home directory using relative and absolute addressing
+       ![image](https://user-images.githubusercontent.com/80945113/115455432-a1189100-a22a-11eb-9fec-87381cfb45d1.png)
     -  delete the previously created subdirectory with the file requesting removal;
     -  delete the file copied to the home directory.
+       ![image](https://user-images.githubusercontent.com/80945113/115455702-f48adf00-a22a-11eb-9d51-46f15784eea8.png)
 
 6) Perform the following sequence of operations:
-    -  create a subdirectory testin the home directory;
-    -  copy the .bash_historyfile to this directory while changing its name to labwork2;
+    -  create a subdirectory test in the home directory;
+    -  copy the .bash_history file to this directory while changing its name to labwork2;
     -  create a hard and soft link to the labwork2file in the test subdirectory; 
-    -  how to define soft and hard link, what do theseconcepts;
+       ![image](https://user-images.githubusercontent.com/80945113/115457078-a37bea80-a22c-11eb-82b1-8eca3843284e.png)
+    -  how to define soft and hard link, what do these concepts;
+       hard link copies file by value (creates mirror copy). Copied file has same inode number and permission</br>
+       soft link copies file by reference. Copied file has different inode number and permission</br>
+       ![image](https://user-images.githubusercontent.com/80945113/115457453-3e74c480-a22d-11eb-9578-0636b1745d34.png)
     -  change the data by opening a symbolic link. What changes will happen and why 
+       let's change file through soft link</br>
+       ![image](https://user-images.githubusercontent.com/80945113/115457755-93183f80-a22d-11eb-9b25-de9ece8e6a17.png)
+       Changes were aplied for origin file (lab2work)
     -  rename the hard link file to hard_lnk_labwork2;
     -  rename the soft link file to symb_lnk_labwork2 file; 
     -  then delete the labwork2. What changes have occurred and why?
+       ![image](https://user-images.githubusercontent.com/80945113/115458386-526cf600-a22e-11eb-937d-3bd17c2615eb.png)
+       Now I try to use hard link file (everything ok): </br>
+       ![image](https://user-images.githubusercontent.com/80945113/115458475-6dd80100-a22e-11eb-8925-1519a64d357c.png)
+       But can't open symbolic link: </br>
+       ![image](https://user-images.githubusercontent.com/80945113/115459068-46cdff00-a22f-11eb-8521-dd226172cc88.png)
+       symbolic links is (unexpectedly) link to original file. If you delete original file link points nowhere. Hardlink is just mirror copy
 7) Using the locate utility, find all files that contain the squid and traceroute sequence.
 8) Determine which partitions are mounted in the system, as well as the types of these partitions.
+   using lsblk command we can watch all blocks mounted into system, including disk partitions
+   ![image](https://user-images.githubusercontent.com/80945113/115459698-058a1f00-a230-11eb-999b-913154c8d49e.png)
 9) Count the number of lines containing a given sequence of characters in a given file.
+   as example let's count frequency of using different commands</br> 
+   ![image](https://user-images.githubusercontent.com/80945113/115462023-ce693d00-a232-11eb-98bc-493c7ed5482e.png)
+
 10) Using the findcommand, find all files in the /etc directory containing the host character sequence.
-11) List all objects in /etc that contain the ss character sequence. How can I duplicate a similar command using a bunch of grep? 
-12) Organize a screen-by-screen print of the contents of the /etc directory. Hint: You must use stream redirection operations.
-13) What are the types of devices and how to determine the type of device? Give examples.
-14) How to determine the type of file in the system, what types of files are there?
-15) * List the first 5 directory files that were recently accessed in the /etcdirectory
+   ![image](https://user-images.githubusercontent.com/80945113/115460575-171ff680-a231-11eb-82c7-de14f7f1c07d.png)
+12) List all objects in /etc that contain the ss character sequence. How can I duplicate a similar command using a bunch of grep? 
+   use [grep ss *] command, result:
+   ![image](https://user-images.githubusercontent.com/80945113/115463384-6b78a580-a234-11eb-8fcc-26b40e14d932.png)
+13) Organize a screen-by-screen print of the contents of the /etc directory. Hint: You must use stream redirection operations.
+14) What are the types of devices and how to determine the type of device? Give examples.
+15) How to determine the type of file in the system, what types of files are there?
+16) * List the first 5 directory files that were recently accessed in the /etcdirectory

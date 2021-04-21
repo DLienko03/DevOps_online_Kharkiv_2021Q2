@@ -5,6 +5,10 @@
     * In group file there are such fields: </br>
       group name : password : GID : users </br>
     * there are a lot of users: </br>
+      ![image](https://user-images.githubusercontent.com/80945113/115575641-6e72a500-a2cb-11eb-81b5-0ccf459a8920.png)
+    * pseudo users are ones whos home directory is not located at /home
+
+
 2) ### What are the uid ranges? What is UID? How to define it?
 
 3) ### What is GID? How to define it?

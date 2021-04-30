@@ -36,14 +36,27 @@
   ![image](https://user-images.githubusercontent.com/80945113/116405598-80f35e00-a838-11eb-9043-ef081f622b02.png)
   H - threads-mode operation
 13. Sort the contents of the processes window using various parameters (for example, the amount of processor time taken up, etc.)
+  to sort by memory usage: top -o +%MEM: </br>
+  ![image](https://user-images.githubusercontent.com/80945113/116701825-07db3e80-a9d1-11eb-93ae-2ed18965228c.png)
+  to sort by time: top -o +TIME: </br>
+  [image](https://user-images.githubusercontent.com/80945113/116703336-d6637280-a9d2-11eb-8661-22cb68be451a.png)
   
-
 14. Concept of priority, what commands are used to set priority?
+  * Priority of task is number wich defines how is important for Linux kernel to allocate CPU time for task. Priority ranges from -20(most important) to 19 (least important)
+  * to launch program with defined priority: nice {priority} {command to launch program}
+  * to reassign priority: renice -n {number} -p {PID}
 
 15. Can I change the priority of a process using the top command? If so, how?
+  It is possible. Enter top, press r, enter PID of process to renice, enter new priority
+  ![image](https://user-images.githubusercontent.com/80945113/116710489-7bce1480-a9da-11eb-8518-9e1522ad1029.png)
 
 16. Examine the kill command. How to send with the kill commandprocess control signal? Give an example of commonly used signals.
-
+  * send commandprocess control soignal using kill: kill {options(signal)} {pid}
+  * commonly used signals: 
+    - 1 (HUP) - Reload a process.
+    - 9 (KILL) - Kill a process.
+    - 15 (TERM) - Gracefully stop a process.
+   
 17. Commands jobs, fg, bg, nohup. What are they for? Use the sleep, yes command to demonstrate the process control mechanism with fg, bg
 
 ## Part2

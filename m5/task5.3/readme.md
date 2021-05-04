@@ -58,7 +58,10 @@
     - 15 (TERM) - Gracefully stop a process.
    
 17. Commands jobs, fg, bg, nohup. What are they for? Use the sleep, yes command to demonstrate the process control mechanism with fg, bg
-
+  * jobs - check stopped processes
+  * fg - to run stopped program on foreground (occupying terminal window)
+  * bg - to run stopped jobs in the background
+  * nohup - to make another program active after terminal is closed
 ## Part2
 1. Check the implementability of the most frequently used OPENSSH commands in the MS Windows operating system. (Description of the expected result of the commands + screenshots: command – result should be presented)
 2. Implement basic SSH settings to increase the security of the client-server connection (at least 

@@ -8,7 +8,7 @@
   * Zombie (Z): 
 2. Examine the pstree command. Make output (highlight) the chain (ancestors) of the current process.
   ![image](https://user-images.githubusercontent.com/80945113/116395885-5bad2280-a82d-11eb-9a30-023ff5cc9fcf.png)
-3. What is a proc file system?
+3. What is a proc file system? </br>
   It is pseudo-filesystem which provides an interface to kernel data structures. 
 4. Print information about the processor (its type, supported technologies, etc.).
   ![image](https://user-images.githubusercontent.com/80945113/116396634-497fb400-a82e-11eb-91d8-ee90e83da7eb.png)
@@ -19,23 +19,27 @@
 7. Print the list of processes to the terminal. Briefly describe the statuses of the processes. What condition are they in, or can they be arriving in  
   ![image](https://user-images.githubusercontent.com/80945113/116400198-71711680-a832-11eb-8678-46f6e2bf8ee2.png)
 
-8. Display only the processes of a specific user. 
+8. Display only the processes of a specific user. </br> 
   ![image](https://user-images.githubusercontent.com/80945113/116400807-23104780-a833-11eb-94e7-9497aac37cd9.png)
 
 9. What utilities can be used to analyze existing running tasks (by analyzing the help for the ps command)?
-  
+  * ps -ef (watch active processes in a full-format listing)
+  * ps -u user_name (display processes owned by user)
+  * ps -g group_name (display processes owned by group)
+  * ps -e --forest (display process tree)
+  * ps -l process_name (display threads )
 
 10. What information does top command display?
   Top command displays list of processes or threds currently being managed by the Linux kernel.
 
-11. Display the processes of the specific user using the top command.
+11. Display the processes of the specific user using the top command. </br>
   ![image](https://user-images.githubusercontent.com/80945113/116404045-ef372100-a836-11eb-8dbb-4626d82e00cc.png)
 
-12. What interactive commands can be used to control the top command? Give a couple of examples.
-  d - set delay between screen updates
+12. What interactive commands can be used to control the top command? Give a couple of examples.</br>
+  d - set delay between screen updates</br>
   ![image](https://user-images.githubusercontent.com/80945113/116405598-80f35e00-a838-11eb-9043-ef081f622b02.png)
-  H - threads-mode operation
-13. Sort the contents of the processes window using various parameters (for example, the amount of processor time taken up, etc.)
+  H - threads-mode operation </br>
+13. Sort the contents of the processes window using various parameters (for example, the amount of processor time taken up, etc.) </br>
   to sort by memory usage: top -o +%MEM: </br>
   ![image](https://user-images.githubusercontent.com/80945113/116701825-07db3e80-a9d1-11eb-93ae-2ed18965228c.png)
   to sort by time: top -o +TIME: </br>
@@ -47,7 +51,7 @@
   * to reassign priority: renice -n {number} -p {PID}
 
 15. Can I change the priority of a process using the top command? If so, how?
-  It is possible. Enter top, press r, enter PID of process to renice, enter new priority
+  It is possible. Enter top, press r, enter PID of process to renice, enter new priority </br>
   ![image](https://user-images.githubusercontent.com/80945113/116710489-7bce1480-a9da-11eb-8518-9e1522ad1029.png)
 
 16. Examine the kill command. How to send with the kill commandprocess control signal? Give an example of commonly used signals.
@@ -62,9 +66,3 @@
   * fg - to run stopped program on foreground (occupying terminal window)
   * bg - to run stopped jobs in the background
   * nohup - to make another program active after terminal is closed
-## Part2
-1. Check the implementability of the most frequently used OPENSSH commands in the MS Windows operating system. (Description of the expected result of the commands + screenshots: command – result should be presented)
-2. Implement basic SSH settings to increase the security of the client-server connection (at least 
-3. List the options for choosing keys for encryption in SSH. Implement 3 of them.
-4. Implement port forwarding for the SSH client from the host machine to the guest Linux virtual machine behind NAT.
-5*. Intercept (capture) traffic (tcpdump, wireshark) while authorizing the remote client on the server using ssh, telnet, rlogin. Analyze the result. 
